@@ -34,7 +34,18 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+    
+    def Traverse(head):
+        current = head
+        while current:
+            print(current.data)
+            current = current.next
 
-class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        
+# class Solution:
+#     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+
+
+
+
+solution = ListNode()
+print(solution.Traverse(1))
