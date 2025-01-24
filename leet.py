@@ -32,20 +32,21 @@
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
+        print("You're the best!")
         self.val = val
         self.next = next
     
     def Traverse(head):
+        print("Success")
+        print(head)
         current = head
         while current:
-            print(current.data)
+            # print(current.data)
             current = current.next
 
 # class Solution:
 #     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
 
-
-
 solution = ListNode()
-print(solution.Traverse(1))
+print(solution.Traverse())
