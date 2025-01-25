@@ -31,18 +31,19 @@
 """ *** Leet Code Problem 2 *** """
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, data=0, next=None):
         print("You're the best!")
-        self.val = val
+        self.data = data
         self.next = next
     
     def Traverse(head):
         print("Success")
         print(head)
         current = head
-        while current:
+        while current is not None:
             # print(current.data)
             current = current.next
+            print(current)
 
 # class Solution:
 #     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
