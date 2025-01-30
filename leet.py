@@ -30,9 +30,8 @@
 
 """ *** Leet Code Problem 2 *** """
 # Definition for singly-linked list.
-class ListNode:
+class ListNode():
     def __init__(self, data=0, next=None):
-        print("You're the best!")
         self.data = data
         self.next = next
     
