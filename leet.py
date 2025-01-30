@@ -29,6 +29,13 @@
 
 
 """ *** Leet Code Problem 2 *** """
+# Psuedo Explanation
+# iterate through each value in the list
+# add number for List 1 with Number from List 2
+# If sum exceeds 10, create a variable for the remainder above
+# add the carry over variable tot he sume of the next two digits
+# return the final number as a linked list
+
 # Definition for singly-linked list.
 class ListNode():
     def __init__(self, data=0, next=None):
@@ -46,6 +53,9 @@ class ListNode():
 
 # class Solution:
 #     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+
+l1 = ListNode(2, ListNode(4, ListNode(3)))
+l2 = ListNode(5, ListNode(6, ListNode(4)))
 
 
 solution = ListNode()
