@@ -42,14 +42,21 @@ class ListNode():
         self.data = data
         self.next = next
     
-    def Traverse(head):
+    def Traverse(self, l1, l2):
         print("Success")
-        print(head)
-        current = head
-        while current is not None:
-            # print(current.data)
-            current = current.next
-            print(current)
+        dummy_head = ListNode(0)
+        current = dummy_head
+
+        while l1 or l2:
+            print(l1.data)
+            l1 = l1.next
+            print(l2.data)
+            l2 = l2.next
+    
+        # while current is not None:
+        #     # print(current.data)
+        #     current = current.next
+        #     print(current)
 
 # class Solution:
 #     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
@@ -59,4 +66,4 @@ l2 = ListNode(5, ListNode(6, ListNode(4)))
 
 
 solution = ListNode()
-print(solution.Traverse())
+print(solution.Traverse(l1, l2))
