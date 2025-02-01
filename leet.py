@@ -43,15 +43,23 @@ class ListNode():
         self.next = next
     
     def Traverse(self, l1, l2):
-        print("Success")
         dummy_head = ListNode(0)
         current = dummy_head
+        carry = 0
 
+        #Iterating through each list and adding values
         while l1 or l2:
-            print(l1.data)
+            val1 = l1.data
+            val2 = l2.data
+            sum = val1 + val2 + carry
+
+            current.next = ListNode(sum)
+
+            #move to next node
             l1 = l1.next
-            print(l2.data)
             l2 = l2.next
+            
+        print(current.next.data)
     
         # while current is not None:
         #     # print(current.data)
@@ -66,4 +74,13 @@ l2 = ListNode(5, ListNode(6, ListNode(4)))
 
 
 solution = ListNode()
-print(solution.Traverse(l1, l2))
+result = solution.Traverse(l1, l2)
+
+
+def print_list(node):
+    while node:
+        print(node.data, end=" -> ")
+        node = node.next
+    print("None")
+
+print_list(result)
