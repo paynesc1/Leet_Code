@@ -52,6 +52,9 @@ class ListNode():
             val1 = l1.data
             val2 = l2.data
             sum = val1 + val2 + carry
+            if sum > 9:
+                sum = 10 - sum
+                carry = 1
 
             current.next = ListNode(sum)
 
@@ -59,15 +62,7 @@ class ListNode():
             l1 = l1.next
             l2 = l2.next
             
-        print(current.next.data)
-    
-        # while current is not None:
-        #     # print(current.data)
-        #     current = current.next
-        #     print(current)
-
-# class Solution:
-#     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+            print(current.next.data)
 
 l1 = ListNode(2, ListNode(4, ListNode(3)))
 l2 = ListNode(5, ListNode(6, ListNode(4)))
@@ -75,12 +70,3 @@ l2 = ListNode(5, ListNode(6, ListNode(4)))
 
 solution = ListNode()
 result = solution.Traverse(l1, l2)
-
-
-def print_list(node):
-    while node:
-        print(node.data, end=" -> ")
-        node = node.next
-    print("None")
-
-print_list(result)
